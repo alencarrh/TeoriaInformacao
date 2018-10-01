@@ -25,10 +25,12 @@ Com esta inicialização a compressão é feita utilizando dos algoritmos ***[LZ
 
 #### LWZ
 >Lizard won't produce archive files out-of-the-box. It's a lower-level tool for dealing with LZW compression directly. **It is not optimized for speed, memory efficiency or performance.** This is a naïve implementation and oh boy is it slow. Seriously, I literally use hexadecimal strings to build dictionary entries (yeah, I know). Note also that the code dictionary is cleared as soon as it becomes full. This creates a way-less-than-optimal compression ratio.
-> -- <cite>[Lizard code][1]</cite>
+>
+> -- <cite>[Lizard][1]</cite>
 
 #### Huffman
 > This project is a clear implementation of Huffman coding, suitable as a reference for educational purposes. It is provided separately in Java, Python, C++, and is open source. The code can be used for study, and as a solid basis for modification and extension. **Consequently, the codebase optimizes for readability and avoids fancy logic, and does not target the best speed/memory/performance**. Home page with detailed description: https://www.nayuki.io/page/reference-huffman-coding
+>
 > -- <cite>[Reference-Huffman-coding][2]</cite>
 
 [1]:https://github.com/lambdacasserole/lizard
