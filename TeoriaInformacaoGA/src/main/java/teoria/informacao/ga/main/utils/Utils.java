@@ -1,10 +1,10 @@
 package teoria.informacao.ga.main.utils;
 
-import org.apache.commons.io.FileUtils;
-
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
+
+import org.apache.commons.io.FileUtils;
 
 public final class Utils {
 

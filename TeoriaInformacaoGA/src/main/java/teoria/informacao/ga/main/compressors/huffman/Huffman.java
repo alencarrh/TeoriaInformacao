@@ -1,8 +1,8 @@
 package teoria.informacao.ga.main.compressors.huffman;
 
-import teoria.informacao.ga.main.interfaces.Compressor;
-
 import java.io.IOException;
+
+import teoria.informacao.ga.main.interfaces.Compressor;
 
 public class Huffman implements Compressor {
 

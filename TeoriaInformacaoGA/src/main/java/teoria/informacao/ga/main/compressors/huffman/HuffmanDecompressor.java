@@ -1,14 +1,14 @@
 package teoria.informacao.ga.main.compressors.huffman;
 
-import nayuki.huffmancoding.BitInputStream;
-import nayuki.huffmancoding.CanonicalCode;
-import nayuki.huffmancoding.CodeTree;
-import nayuki.huffmancoding.HuffmanDecompress;
-
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+
+import nayuki.huffmancoding.BitInputStream;
+import nayuki.huffmancoding.CanonicalCode;
+import nayuki.huffmancoding.CodeTree;
+import nayuki.huffmancoding.HuffmanDecompress;
 
 public class HuffmanDecompressor {
 

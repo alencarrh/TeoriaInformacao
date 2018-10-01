@@ -1,11 +1,11 @@
 package teoria.informacao.ga.main;
 
-import teoria.informacao.ga.main.compressors.CompressorHandler;
+import java.io.IOException;
+
+import teoria.informacao.ga.main.compressors.CompressionHandler;
 import teoria.informacao.ga.main.compressors.huffman.Huffman;
 import teoria.informacao.ga.main.compressors.lzw.Lzw;
 import teoria.informacao.ga.main.utils.Utils;
-
-import java.io.IOException;
 
 public class Main {
 
@@ -31,12 +31,12 @@ public class Main {
             showCompressInfo = hasParam(args, "-sci") || hasParam(args, "--show-compress-info");
         }
 
-        CompressorHandler compressor = CompressorHandler.builder()
-                .compressor(new Lzw())
-                .compressor(new Huffman())
-                .log(log)
-                .showCompressInfo(showCompressInfo)
-                .build();
+        CompressionHandler compressor = CompressionHandler.builder()
+            .compressor(new Lzw())
+            .compressor(new Huffman())
+            .log(log)
+            .showCompressInfo(showCompressInfo)
+            .build();
 
         compressor.run(mode, inputFile);
 

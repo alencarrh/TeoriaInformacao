@@ -1,15 +1,15 @@
 package teoria.informacao.ga.main.compressors.huffman;
 
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+
 import nayuki.huffmancoding.BitOutputStream;
 import nayuki.huffmancoding.CanonicalCode;
 import nayuki.huffmancoding.CodeTree;
 import nayuki.huffmancoding.FrequencyTable;
 import nayuki.huffmancoding.HuffmanCompress;
-
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
 
 public class HuffmanCompressor {
 
