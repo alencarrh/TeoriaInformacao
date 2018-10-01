@@ -85,7 +85,8 @@ public class CompressionHandler {
         logCompressInfo("Compression step executed:", compressor.name());
         logCompressInfo("\tnew size:", currentSize);
         logCompressInfo("\texecution time:", time(startTime, stopTime) + "ms");
-        logCompressInfo("\tspace saving:", spaceSaving(currentSize, previousSize) + "%");
+        logCompressInfo("\tspace saving (to previous step):", spaceSaving(currentSize, previousSize) + "%");
+        logCompressInfo("\tspace saving (to original file):", spaceSaving(currentSize, initialSize) + "%");
         logCompressInfo("\tcompression ratio (to previous step):", compressionRatio(currentSize, previousSize));
         logCompressInfo("\tcompression ratio (to original file):", compressionRatio(currentSize, initialSize));
     }

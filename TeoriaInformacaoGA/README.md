@@ -70,19 +70,21 @@ Compressing file: cantrbry/alice29.txt
 Original file size: 152089
 Compression step executed: LZW
         new size: 74148
-        execution time: 241ms
-        space saving: 51.246967%
+        execution time: 553ms
+        space saving (to previous step): 51.246967%
+        space saving (to original file): 51.246967%
         compression ratio (to previous step): 2.0511544
         compression ratio (to original file): 2.0511544
 Compression step executed: Huffman
         new size: 69804
-        execution time: 65ms
-        space saving: 5.858551%
+        execution time: 98ms
+        space saving (to previous step): 5.858551%
+        space saving (to original file): 54.10319%
         compression ratio (to previous step): 1.0622314
         compression ratio (to original file): 2.1788006
 
 Final status:
-        Execution time: 306ms
+        Execution time: 651ms
         Original size: 152089
         Compressed size: 69804
         Space saving: 54.10319%
