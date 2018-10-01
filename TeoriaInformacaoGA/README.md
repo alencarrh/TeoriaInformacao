@@ -55,6 +55,8 @@ mvn clean install
 ```
 
 ### Executar
+O .jar que que deve ser executado é o `trabalho.ga-1-spring-boot.jar`, mas não é um projeto spring boot, somente foi utilizado o `<build></build>` do spring no `pom.xml` para gerar o arquivo .jar.
+
 ```
 $ java -jar target/trabalho.ga-1-spring-boot.jar -h
 params: MODE filename [-log] [(-sci | --show-compress-info)] [(-h | --help)]
