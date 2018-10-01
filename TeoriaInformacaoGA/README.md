@@ -11,7 +11,7 @@ A idéia é desenvolver uma solução de compactação(sem perda –lossless) em
 ### Setup inicial
 ```
 git clone https://github.com/alencarrh/TeoriaInformacao
-cd TeoriaInformacaoGA
+cd /TeoriaInformacao/TeoriaInformacaoGA
 ```
 
 ### Build
