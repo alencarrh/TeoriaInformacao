@@ -34,7 +34,9 @@ Com esta inicialização a compressão é feita utilizando dos algoritmos ***[LZ
 [1]:https://github.com/lambdacasserole/lizard
 [2]:https://github.com/nayuki/Reference-Huffman-coding
 
-#### São pré-requisitos deste projeto:
+
+ 
+## São pré-requisitos deste projeto:
 * **Maven 3** *[como instalar](https://www.mkyong.com/maven/how-to-install-maven-in-windows/)*
 * **Java 8**
 * **[Lombok](https://projectlombok.org/)** Habilitado na sua IDE (*se utilizar uma IDE*)
