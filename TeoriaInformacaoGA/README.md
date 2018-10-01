@@ -70,30 +70,31 @@ Compressing file: cantrbry/alice29.txt
 Original file size: 152089
 Compression step executed: LZW
         new size: 74148
-        execution time: 299ms
+        execution time: 241ms
         space saving: 51.246967%
         compression ratio (to previous step): 2.0511544
         compression ratio (to original file): 2.0511544
 Compression step executed: Huffman
         new size: 69804
-        execution time: 83ms
+        execution time: 65ms
         space saving: 5.858551%
         compression ratio (to previous step): 1.0622314
         compression ratio (to original file): 2.1788006
 
 Final status:
-        Execution time: 382ms
+        Execution time: 306ms
         Original size: 152089
         Compressed size: 69804
         Space saving: 54.10319%
         Compression ratio: 2.1788006
 File compressed: cantrbry/alice29.txt.cmpt
-
 ```
 
 ### Descompactar arquivo
 ```
 $ java -jar target/trabalho.ga-1-spring-boot.jar -d cantrbry/alice29.txt.cmpt -log -sci
 Decompressing file: cantrbry/alice29.txt.cmpt
-File decompressed: cantrbry/alice29.txt
+Decompression step executed: Huffman - 38ms
+Decompression step executed: LZW - 140ms
+File decompressed: cantrbry/alice29.txt - 178ms
 ```

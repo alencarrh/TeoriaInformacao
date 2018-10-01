@@ -53,24 +53,31 @@ public class CompressionHandler {
         logCompressInfo("Original file size: " + initialSize);
         for (Compressor compressor : getCompressors()) {
             startTime = System.nanoTime();
-            data = compressor.compress(data);
-            stopTime = System.nanoTime();
-            currentSize = data.length;
 
+            data = compressor.compress(data);
+
+            stopTime = System.nanoTime();
+
+            currentSize = data.length;
             logCompressStep(initialSize, previousSize, currentSize, startTime, stopTime, compressor);
             allTime += time(startTime, stopTime);
             previousSize = currentSize;
         }
+
+        logCompressFinalStatus(data, initialSize, allTime);
+
+        String resultFile = filename + ".cmpt";
+        log("File compressed:", resultFile);
+        Utils.saveFile(resultFile, data);
+    }
+
+    private void logCompressFinalStatus(final byte[] data, final int initialSize, final long allTime) {
         logCompressInfo("\nFinal status:");
         logCompressInfo("\tExecution time:", allTime + "ms");
         logCompressInfo("\tOriginal size:", initialSize);
         logCompressInfo("\tCompressed size:", data.length);
         logCompressInfo("\tSpace saving:", spaceSaving(data.length, initialSize) + "%");
         logCompressInfo("\tCompression ratio:", compressionRatio(data.length, initialSize));
-
-        String resultFile = filename + ".cmpt";
-        log("File compressed:", resultFile);
-        Utils.saveFile(resultFile, data);
     }
 
     private void logCompressStep(final int initialSize, final int previousSize, final int currentSize,
@@ -86,11 +93,18 @@ public class CompressionHandler {
     private void decompress(String filename) throws IOException {
         log("Decompressing file:", filename);
         byte[] data = Utils.readFile(filename);
+        long startTime, stopTime, allTime = 0;
         for (Compressor compressor : getCompressorsReversed()) {
+            startTime = System.nanoTime();
+
             data = compressor.decompress(data);
+
+            stopTime = System.nanoTime();
+            logCompressInfo("Decompression step executed:", compressor.name(), "-", time(startTime, stopTime) + "ms");
+            allTime += time(startTime, stopTime);
         }
         String resultFile = filename.replace(".cmpt", "");
-        log("File decompressed:", resultFile);
+        log("File decompressed:", resultFile, "-", allTime + "ms");
         Utils.saveFile(resultFile, data);
     }
 
