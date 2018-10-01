@@ -94,6 +94,35 @@ Final status:
 File compressed: cantrbry/alice29.txt.cmpt
 ```
 
+
+```
+$ java -jar target/trabalho.ga-1-spring-boot.jar -c cantrbry/sum -log -sci
+Compressing file: cantrbry/sum
+Original file size: 38240
+Compression step executed: LZW
+        new size: 25054
+        execution time: 81ms
+        space saving (to previous step): 34.482216%
+        space saving (to original file): 34.482216%
+        compression ratio (to previous step): 1.5263032
+        compression ratio (to original file): 1.5263032
+Compression step executed: Huffman
+        new size: 22053
+        execution time: 35ms
+        space saving (to previous step): 11.978127%
+        space saving (to original file): 42.33002%
+        compression ratio (to previous step): 1.1360812
+        compression ratio (to original file): 1.7340045
+
+Final status:
+        Execution time: 116ms
+        Original size: 38240
+        Compressed size: 22053
+        Space saving: 42.33002%
+        Compression ratio: 1.7340045
+File compressed: cantrbry/sum.cmpt
+```
+
 ### Descompactar arquivo
 ```
 $ java -jar target/trabalho.ga-1-spring-boot.jar -d cantrbry/alice29.txt.cmpt -log -sci
